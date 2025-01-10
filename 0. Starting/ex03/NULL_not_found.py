@@ -27,7 +27,6 @@ def NULL_not_found(object: any) -> int:
 		return 1
 	return 0
 
-# //refactor
 # def NULL_not_found(object: any) -> int:
 # 	"""Prints all types of null
 

@@ -27,6 +27,7 @@ RUN if [ -f requirements.txt ]; then \
 		echo "Warning: requirements.txt not found. Skipping dependency installation."; \
 	fi
 
+RUN alias norminette="python -m flake8"
 # Copy application code into the container
 COPY . .
 
@@ -35,7 +36,6 @@ RUN chown -R appuser:appuser /app
 
 # Switch to the non-root user
 USER appuser
-
 
 # Set a default command to run a Python application (replace "app" with your entry module/script)
 CMD ["sleep", "infinity"]
