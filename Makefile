@@ -46,5 +46,7 @@ fclean: clean
 	@echo "Removing Docker images..."
 	@docker images -q $(IMAGE_NAME) | xargs -r docker rmi -f
 
+re: fclean all
+
 # Phony targets to avoid conflicts with files of the same name
-.PHONY: all build run clean fclean
+.PHONY: all build run clean fclean re
