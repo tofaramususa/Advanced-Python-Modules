@@ -10,6 +10,7 @@ def	main():
 
 	bmi = give_bmi(height, weight)
 	print(bmi, type(bmi))
+	print(apply_limit(bmi, 26))
 	
 
 
